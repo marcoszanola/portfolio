@@ -140,6 +140,12 @@ body{
     font-family: var(--fonte-primaria);
 }
 
+.about-descricao{
+    font-size: 1.25rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+}
+
 .curriculum{
     padding: 6.953% 18%;
     display: flex;
@@ -151,33 +157,64 @@ body{
     width: 715px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
 }
 
 .curriculum-titulo{
-    font-size: 1.75rem;
+    font-size: 1.85rem;
     color: var(--cor-texto-destaque);
     font-family: var(--fonte-secundaria);
     font-weight: 400;
 }
 
-.curriculum-descricao, .curriculum-lista{
+.curriculum-descricao, .curriculum-lista, .todos-cursos-lista{
     font-size: 1.125rem;
     font-family: var(--fonte-primaria);
     font-weight: 400;
+    margin-bottom: 30px;
 }
 
-.curriculum-lista{
+.curriculum-lista, .todos-cursos-lista{
     list-style: circle;
     list-style-position: inside;
 }
 
-.curriculum-lista a{
+.todos-cursos-lista{
+    line-height: 30px;
+}
+
+.curriculum-lista a, .todos-cursos-lista a{
     text-decoration: none;
     color: var(--cor-link);
 }
 
-.curriculum-lista a:hover{
+.curriculum-lista a:hover, .todos-cursos-lista a:hover{
     cursor: pointer;
     color: var(--cor-link-hover);
+}
+
+.todos-cursos{
+    padding: 3% 18%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner-projeto{
+    background:rgba(0, 0, 0, 0.6);
+    width: 800px;
+    height: 130px;
+    margin-bottom: 30px;
+}
+
+.banner-projeto img{
+    border-radius: 10px;
+    opacity: 60%;
+    transition: 0.25s ease-out;
+}
+
+.banner-projeto img:hover{
+    opacity: 100%;
+    transition: 0.25s ease-in;
 }
