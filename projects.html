@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="./estilos/responsivo.css">
     </head>
     <body>
+
+        <div id="tela-escura"></div>
+
         <header class="cabecalho" >
             <nav class="cabecalho-menu" >
                 <a class="menu-link" href="index.html">Home</a>
@@ -21,18 +24,76 @@
         <main>
             <section class="todos-cursos">
                 <h1 class="curriculum-titulo">Visualizador de Cartas Po-Ki-Oh!</h1>
-                <a class="banner-projeto" href="https://marcoszanola.github.io/PoKiOh-Viewer/"><img src="./imagens/Banner Projeto.png" alt="Banner Po-Ki-Oh"></a>
+                <a class="banner-projeto" href="#" data-projeto="1"><img src="./imagens/Banner Projeto.png" alt="Banner Po-Ki-Oh"></a>
 
-                <h1 class="curriculum-titulo">Projeto 2</h1>
-                <a class="banner-projeto" href=""><img src="" alt="Em breve"></a>
+                <div class="submenu-projeto" id="submenu-1"> 
+
+                    <div class="submenu-projeto-pics">
+                
+                        <img class="submenu-pics-demo" src="./imagens/pokioh demo.png" alt="">  
+    
+                        <div class="submenu-pics-icons">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="">
+                        </div>
+
+                        <span class="submenu-fechar">&times;</span>
+
+                    </div>
+                    
+                    <div class="submenu-projeto-descricao">
+                        <h1>_____________________________________________________</h1>
+                        <h1>Visualizador de Cartas Po-Ki-Oh!</h1>
+                        <h3>🌍 Website: <a href="https://marcoszanola.github.io/PoKiOh-Viewer/" target="_blank">github-pages.com</a> </h3>
+                        <h3>🖥️ Repositório: <a href="https://github.com/marcoszanola/PoKiOh-Viewer" target="_blank">github.com</a> </h3>
+                        <h3>🗓️ Período de Desenvolvimento: 21/01/2025 a 03/02/2025</h3>
+                    </div>
+
+                </div>
+
+                <h1 class="curriculum-titulo">Dashboard: Análise de Salários da Área de Dados</h1>
+                <a class="banner-projeto" href="#" data-projeto="2"><img src="./imagens/Banner Dashboard 1.2.png" alt="Dashboard Análise de Dados 1"></a>
+
+                <div class="submenu-projeto" id="submenu-2">
+
+                    <div class="submenu-projeto-pics">
+
+                        <img class="submenu-pics-demo" src="./imagens/dashboard 1 demo.png" alt="">
+
+                        <div class="submenu-pics-icons"> 
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kaggle/kaggle-original.svg" alt="">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" alt="">
+                        </div>
+
+                        <span class="submenu-fechar">&times;</span>
+
+                    </div>
+
+                    <div class="submenu-projeto-descricao">
+                        <h1>_____________________________________________________</h1>
+                        <h1>Dashboard: Análise de Salários da Área de Dados</h1>
+                        <h3>🌍 Website: <a href="https://dashboard-dados-salariais-imersao-alura2025.streamlit.app/" target="_blank">streamlit.app</a> </h3>
+                        <h3>🖥️ Repositório: <a href="https://github.com/marcoszanola/Dashboard-Dados-Salariais-Imersao-Alura2025" target="_blank">github.com</a> </h3>
+                        <h3>🗓️ Período de Desenvolvimento: 11/08/2025</h3>
+                    </div>
+
+                </div>
 
                 <h1 class="curriculum-titulo">Projeto 3</h1>
                 <a class="banner-projeto" href=""><img src="" alt="Em breve"></a>
+
+                <h1 class="curriculum-titulo">Projeto 4</h1>
+                <a class="banner-projeto" href=""><img src="" alt="Em breve"></a>
             </section>
-        </main>
+        </main> 
 
         <footer class="rodape">
             <p>Desenvolvido por Marcos V C Zanola</p>
         </footer>
+
+        <script src="./js/index.js" ></script>
     </body>
 </html>
