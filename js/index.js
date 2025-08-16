@@ -7,10 +7,69 @@ document.querySelectorAll(".banner-projeto").forEach(banner => {
     });
 });
 
+document.querySelectorAll('.certificado-link').forEach(certificado => {
+    certificado.addEventListener("click", e => {
+        e.preventDefault();
+        const id = certificado.getAttribute('data-certificado');    
+        document.getElementById(`certificado-${id}`).classList.add("ativo");
+        document.getElementById('tela-escura').style.display = 'block';
+    })
+})
+
+
 document.querySelectorAll(".submenu-fechar").forEach(botao => {
     botao.addEventListener("click", () => {
-        botao.closest(".submenu-projeto").classList.remove("ativo");
+        const projeto = botao.closest(".submenu-projeto");
+        const certificado = botao.closest(".submenu-certificado");
+
+        if (projeto) projeto.classList.remove("ativo");
+        if (certificado) certificado.classList.remove("ativo");
         document.getElementById('tela-escura').style.display = 'none';
     });
 });
+
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("certificado-link");
+  if (c == "all") c = "";
+
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+var btnContainer = document.getElementById("filtro-cursos");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
 

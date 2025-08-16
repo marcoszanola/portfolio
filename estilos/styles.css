@@ -165,6 +165,7 @@ body{
     color: var(--cor-texto-destaque);
     font-family: var(--fonte-secundaria);
     font-weight: 400;
+    margin-top: 30px;
 }
 
 .curriculum-descricao, .curriculum-lista, .todos-cursos-lista{
@@ -184,12 +185,12 @@ body{
     line-height: 30px;
 }
 
-.curriculum-lista a, .todos-cursos-lista a{
+.curriculum-lista a, .todos-cursos-lista a {
     text-decoration: none;
     color: var(--cor-link);
 }
 
-.curriculum-lista a:hover, .todos-cursos-lista a:hover{
+.curriculum-lista a:hover, .todos-cursos-lista a:hover {
     cursor: pointer;
     color: var(--cor-link-hover);
 }
@@ -288,4 +289,101 @@ body{
 .submenu-projeto .submenu-projeto-descricao{
     padding: 0 30px;
     line-height: 50px;
+}
+
+.certificado-link {
+    font-size: 1.125rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--cor-link);
+    display: none;
+}
+
+.certificado-link:hover {
+    cursor: pointer;
+    color: var(--cor-link-hover);
+}
+
+.submenu-certificado {
+    position: fixed;
+    width: 1000px;
+    height: 760px;
+    background-color: #040f18;
+    border-radius: 5px;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.submenu-certificado.ativo {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+}
+
+.submenu-certificado img{
+    padding: 30px;
+}
+
+.filtro-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+}
+
+.show {
+  display: block;
+}
+
+.btn {
+  padding: 12px 18px;
+  border: 2px solid #8b5cf6;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 130px;
+}
+
+.btn:hover {
+  background-color: #8b5cf6;
+  color: white;
+  transform: scale(1.05);    
+}
+
+.btn.active {
+  background-color: #8b5cf6;
+  color: white;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5);
+}
+
+.descricao-certificado-palestras {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.descricao-certificado-palestras a {
+    color: var(--cor-link);
+}
+
+.descricao-certificado-palestras a:hover {
+    cursor: pointer;
+    color: var(--cor-link-hover);
 }
