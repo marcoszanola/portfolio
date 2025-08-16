@@ -19,3 +19,13 @@
     }
 
 }
+
+@media (max-width: 600px) {
+    .filtro-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .filtro-menu button {
+        width: 100%;
+    }
+}
